@@ -5,8 +5,6 @@ import com.revolut.lev.dao.LedgerDao
 import spark.Request
 import spark.Response
 import spark.Route
-import spark.QueryParamsMap
-
 
 abstract class AbstractRequestHandler<T>(
     protected val accountDao: AccountDao,
@@ -14,7 +12,7 @@ abstract class AbstractRequestHandler<T>(
 ) :
     RequestHandler<T>, Route {
 
-    abstract override fun process(request:T?, queryParamsMap: Map<String, String>): Answer
+    abstract override fun process(request: T?, queryParamsMap: Map<String, String>): Answer
 
     override fun handle(request: Request, response: Response): Any {
         var value: T? = null

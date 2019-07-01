@@ -6,7 +6,6 @@ import kotlinx.serialization.json.Json
 import com.revolut.lev.dao.AccountDao
 import com.revolut.lev.dao.LedgerDao
 import kotlinx.serialization.Serializable
-import spark.QueryParamsMap
 
 @Serializable
 data class TransferRequest(val accountTo: String, val accountFrom: String, val amount: Long)

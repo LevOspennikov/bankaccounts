@@ -14,7 +14,7 @@ internal class LedgerDaoTest {
 
     @BeforeEach
     fun setUp() {
-        ledgerDao = LedgerDao()
+        ledgerDao = LedgerDaoList()
     }
 
     @Test

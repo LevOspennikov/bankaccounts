@@ -1,7 +1,9 @@
 package com.revolut.lev.requests
 
 import com.revolut.lev.dao.AccountDao
+import com.revolut.lev.dao.AccountDaoMap
 import com.revolut.lev.dao.LedgerDao
+import com.revolut.lev.dao.LedgerDaoList
 import kotlinx.serialization.ImplicitReflectionSerializer
 import kotlinx.serialization.MissingFieldException
 import kotlinx.serialization.UnstableDefault
@@ -13,8 +15,8 @@ import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.assertThrows
 
 class DepositRequestHandlerTest {
-    val accountDao = AccountDao()
-    val ledgerDao = LedgerDao()
+    val accountDao = AccountDaoMap()
+    val ledgerDao = LedgerDaoList()
     val accountId = accountDao.newAccount()
 
     @Test

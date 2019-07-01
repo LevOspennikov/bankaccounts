@@ -1,15 +1,15 @@
 package com.revolut.lev
 
-import com.revolut.lev.dao.AccountDao
-import com.revolut.lev.dao.LedgerDao
+import com.revolut.lev.dao.AccountDaoMap
+import com.revolut.lev.dao.LedgerDaoList
 import com.revolut.lev.requests.*
 import spark.Spark.*
 
 fun main(args: Array<String>) {
     val maxThreads = 4
     threadPool(maxThreads)
-    val accountDao = AccountDao()
-    val ledgerDao = LedgerDao()
+    val accountDao = AccountDaoMap()
+    val ledgerDao = LedgerDaoList()
 
     path("/account") {
 

@@ -15,7 +15,7 @@ internal class AccountDaoTest {
 
     @BeforeEach
     fun setUp() {
-        accountDao = AccountDao()
+        accountDao = AccountDaoMap()
     }
 
     @Test
