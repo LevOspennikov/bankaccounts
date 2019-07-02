@@ -1,30 +1,18 @@
 package com.revolut.lev.dao
 
 import java.lang.Exception
-import java.util.concurrent.ConcurrentLinkedQueue
 
-class LedgerDao {
-    /**
-     * An array of accounts by index.
-     */
-    private var ledger: ConcurrentLinkedQueue<LedgerRecord> = ConcurrentLinkedQueue<LedgerRecord>()
+interface LedgerDao {
 
     /**
      * Returns all history where account equals account from or account to
      */
-    fun getAllHistoryByAccount(account: String): List<LedgerRecord> {
-        return ledger.filter { ledgerRecord ->
-            ledgerRecord.error == null
-                    && (ledgerRecord.from == account || ledgerRecord.to == account)
-        }
-    }
+    fun getAllHistoryByAccount(account: String): List<LedgerRecord>
 
     /**
      * Write new record to ledger
      */
-    fun writeToLedger(from: String, to: String, amount: Long, error: Exception? = null) {
-        ledger.add(LedgerRecord(from, to, amount, error))
-    }
+    fun writeToLedger(from: String, to: String, amount: Long, error: Exception? = null)
 
     /**
      * ledger data structure.

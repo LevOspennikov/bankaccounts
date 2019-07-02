@@ -5,15 +5,17 @@ import com.nhaarman.mockito_kotlin.mock
 import com.nhaarman.mockito_kotlin.verify
 import com.nhaarman.mockito_kotlin.whenever
 import com.revolut.lev.dao.AccountDao
+import com.revolut.lev.dao.AccountDaoMap
 import com.revolut.lev.dao.LedgerDao
+import com.revolut.lev.dao.LedgerDaoList
 import org.junit.jupiter.api.Test
 
 import spark.Request
 import spark.Response
 
 internal class AbstractRequestHandlerTest {
-    val accountDao = AccountDao()
-    val ledgerDao = LedgerDao()
+    val accountDao = AccountDaoMap()
+    val ledgerDao = LedgerDaoList()
 
     @Test
     fun handleCorrectRequest() {

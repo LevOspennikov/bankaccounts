@@ -6,7 +6,6 @@ import kotlinx.serialization.json.Json
 import com.revolut.lev.dao.AccountDao
 import com.revolut.lev.dao.LedgerDao
 import kotlinx.serialization.Serializable
-import spark.QueryParamsMap
 
 @Serializable
 data class WithdrawRequest(val account: String, val amount: Long)
