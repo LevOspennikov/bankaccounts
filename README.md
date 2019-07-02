@@ -1,6 +1,8 @@
 # bankaccounts
 
-This is a RESTful api for creating and transfering some virtual money. It uses in-memory storage for account and history, works with 4 threads
+This is a RESTful api for creating and transfering some virtual money. It uses in-memory storage for account and history, works with 4 threads.
+
+To start server you should run main function from Main.kt file. Server will start at `http://localhost:4567/`
 
 ### Available Services
 
